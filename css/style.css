@@ -2,6 +2,20 @@ body {
 	margin: 0;
 }
 
+.main-nav {
+	position: fixed;
+	top: 0;
+	height: 50px;
+	background-color: #000;
+	width: 100%;
+	transition: all 0.4s;
+	z-index: 1;
+}
+
+#main-nav.after-fix {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
 #first {
 	height: 50vh;
 	background: blue;
@@ -10,4 +24,9 @@ body {
 #first p {
 	margin: 0;
 	color: #FFF;
+}
+
+#css_metod p {
+	color: blue;
+	font-size: 20px;
 }
