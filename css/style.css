@@ -1,0 +1,13 @@
+body {
+	margin: 0;
+}
+
+#first {
+	height: 50vh;
+	background: blue;
+}
+
+#first p {
+	margin: 0;
+	color: #FFF;
+}
