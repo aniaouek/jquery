@@ -30,3 +30,14 @@ body {
 	color: blue;
 	font-size: 20px;
 }
+
+#metody_fade > div {
+	height: 300px;
+	background-color: red;
+}
+
+
+
+
+
+

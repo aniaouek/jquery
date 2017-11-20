@@ -1,17 +1,20 @@
-$(document).ready(function() {
-//	changeColor();
+$(document).ready(function () {
+	//	changeColor();
 	addClassToNav();
 	znajdzP();
+	wypiszLi();
+	kilkaZdarzen();
+	fadeDiv();
 });
 
-$(window).scroll(function() {
+$(window).scroll(function () {
 	addClassToNav();
 });
 
 //$= JQuery
 
 function changeColor() {
-//	var zmienna = document.getElementById('first');
+	//	var zmienna = document.getElementById('first');
 	$("#first").css('background', 'red').hide('slow').show(3000);
 }
 var first = $('#first');
@@ -81,37 +84,56 @@ $('#formularz input').val('jednolity tekst');
 function addClassToNav() {
 	var actualPos = $(document).scrollTop();
 	var navHeight = $('#main-nav').height();
-	
-	if(actualPos > navHeight) {
+
+	if (actualPos > navHeight) {
 		$('#main-nav').addClass('after-fix');
 	} else {
 		$('#main-nav').removeClass('after-fix');
-	}		  
+	}
 }
 
 function znajdzP() {
 	var paragrafy = $('#find').find('p');
-	 
-	paragrafy.each(function() {
-		 $(this).css('background-color', 'red');
-	 })
+
+	paragrafy.each(function () {
+		$(this).css('background-color', 'red');
+	})
 }
 
+function wypiszLi() {
+	$('#log').click(function () {
+		$('#click').find('li').each(function () {
+			console.log($(this).text());
+		})
+	})
+}
 
+function kilkaZdarzen() {
+	$('#kilka_zdarzen a').on({
+		'mouseover': function() {
+			$(this).css('font-size', '25px');
+		},
+		'mouseout': function() {
+			$(this).css('font-size', '12px');
+		},
+		'click': function(e) {
+			e.preventDefault();
+			$(this).css('color', 'red');
+		}
+	});
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+function fadeDiv() {
+	$('#show').click(function() {
+//		$('#metody_fade > div').fadeIn('slow');
+		$('#metody_fade > div').slideDown('slow');
+	});
+	
+	$('#hide').click(function() {
+//		$('#metody_fade > div').fadeOut('slow');
+		$('#metody_fade > div').slideUp('slow');
+	});
+}
 
 
 
